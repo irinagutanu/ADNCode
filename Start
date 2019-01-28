@@ -1,0 +1,127 @@
+#include <iostream>
+#include <string>
+using namespace std;
+#define MAX 100
+
+enum ADN{A=0, T, C, G};
+int ADN[MAX];
+
+void declarare(int n, int ADN[]);
+void show(int n, int ADN[]);
+char Value(int v);
+int[] NOT(int[] v);
+int[] AND(int[] v1, int[] v2);
+int[] OR(int[] v1, int[] v2);
+int[] XOR(int[] v1, int[] v2);
+int[] Adunare(int[] v1, int[] v2);
+int[] Scadere(int[] v1, int[] v2);
+
+
+int main()
+{
+  int n;
+  cout << "Introdu un numar: " << endl;
+  cin >> n;
+  if( n/4 < MAX){
+    declarare(n, ADN);
+    show(n, ADN);
+  }
+  else
+  {
+    cout << "Nu este un numar bun" << endl;   
+  }
+}
+
+void declarare(int n, int ADN[])
+{
+    int k=4*n;   // pentru a ne usura calculele vom folosi numai numere divizibile cu 4
+    for(int i=0; i < k ; i++){
+        char x ;
+        cout << "Da o valoare pentru catena de ADN (A, T, C sau G)" << endl;
+        while(1){
+            cin >> x;
+            if( x == 'A')
+            {
+                ADN[i] = A;
+                break;
+            }
+            else if( x == 'T')
+            {
+                 ADN[i] = T;
+                 break;
+            }
+            else if( x == 'G')
+            {
+                 ADN[i] = G;
+                 break;
+            }
+            else if( x == 'C')
+            {
+                 ADN[i] = C;
+                 break;
+            }
+            else
+            {
+                cout << "Nu a fost o valoare buna. Mai incearca odata" << endl;
+            }
+        }
+    }
+}
+
+void show(int n, int ADN[])
+{
+    int k=4*n;
+    cout << "Datele de ADN sunt: ";
+    for(int i=0; i <k; i++)
+    {
+        cout << Value(ADN[i]);
+    }
+    cout << endl;
+}
+
+char Value(int v)
+{
+    if( v == 0 )
+    {
+        return 'A';
+    }
+    else if( v == 1)
+    {
+         return 'T';
+    }
+    else if( v == 3)
+    {
+         return 'G';
+    }
+    else if( v == 2 )
+    {
+         return 'C';
+    }
+    return '0';
+}
+
+int[] NOT(int[] v)
+{
+    //completeaza individual
+}
+int[] AND(int[] v1, int[] v2)
+{
+    //completeaza individual
+}
+int[] OR(int[] v1, int[] v2)
+{
+    //completeaza individual
+}
+int[] XOR(int[] v1, int[] v2)
+{
+    //completeaza individual
+}
+int[] Adunare(int[] v1, int[] v2)
+{
+    // ADAUGA ADUNAREA PENTRU VALORI DE ORDIN 4 CARE NU DEPASESC 4 UNITATI
+}
+
+int[] Scadere(int[] v1, int[] v2)
+{
+     // ADAUGA SCADERE PENTRU VALORI DE ORDIN 4 CARE NU DEPASESC 4 UNITATI
+}
