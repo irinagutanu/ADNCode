@@ -9,13 +9,16 @@ int ADN[MAX];
 void declarare(int n, int ADN[]);
 void show(int n, int ADN[]);
 char Value(int v);
-int[] NOT(int[] v);
-int[] AND(int[] v1, int[] v2);
-int[] OR(int[] v1, int[] v2);
-int[] XOR(int[] v1, int[] v2);
-int[] Adunare(int[] v1, int[] v2);
-int[] Scadere(int[] v1, int[] v2);
-
+int* NOT(int v[]);
+int* AND(int v1[], int v2[]);
+int* OR(int v1[], int v2[]);
+int* XOR(int v1[], int v2[]);
+int* Adunare(int v1[], int v2[]);
+int* Scadere(int v1[], int v2[]);
+int* Transformate(int numar);
+int Transformare(int numar[]);
+int CautareBinara(int ADN[], int search[]);
+int* Sortare(int ADN[]);
 
 int main()
 {
@@ -100,28 +103,43 @@ char Value(int v)
     return '0';
 }
 
-int[] NOT(int[] v)
-{
+int* Transformare(int numar){
+  //completeaza individual
+}
+int Transformare(int numar[]){
+  //completeaza individual
+}
+int* NOT(int v[]){
     //completeaza individual
 }
-int[] AND(int[] v1, int[] v2)
-{
+int* AND(int v1[], int v2[]){
     //completeaza individual
 }
-int[] OR(int[] v1, int[] v2)
-{
+int* OR(int v1[], int v2[]){
     //completeaza individual
 }
-int[] XOR(int[] v1, int[] v2)
-{
+int* XOR(int v1[], int v2[]){
     //completeaza individual
 }
-int[] Adunare(int[] v1, int[] v2)
-{
+int* Adunare(int v1[], int v2[]){
     // ADAUGA ADUNAREA PENTRU VALORI DE ORDIN 4 CARE NU DEPASESC 4 UNITATI
 }
-
-int[] Scadere(int[] v1, int[] v2)
-{
+int* Scadere(int v1[], int v2[]){
      // ADAUGA SCADERE PENTRU VALORI DE ORDIN 4 CARE NU DEPASESC 4 UNITATI
+}
+
+// Vectorul search are intotdeauna 4 cifre
+// Un element al vectorului ADN[] este considerat numarul dintre i1 = 4*j si i2 = 4*j + 3 inclusiv
+// Ordinea de citire e de la stanga la dreapta. Deci: AATC = 1 * 4^1 + 2 * 4^0 = 6
+// Realizati o cautare binara 
+int CautareBinara(int ADN[], int search[]){
+  // Realizati o cautare binara 
+}
+
+int* sortare(int ADN[]){
+  // Sortati (pe catene de cate patru) vectorul dat
+}
+
+int* Interclasare(int ADN[], int ADN_nou[]){
+  //Cei doi vectori sunt sortati (pe catene de cate patru). Interclasati cei doi vectori
 }
